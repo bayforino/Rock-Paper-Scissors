@@ -104,15 +104,22 @@
 
     function playRound(){
         playerSelection = prompt(`Rock Paper Scissors! What do you pick?`);
-        if (playerSelection === `rock` || playerSelection === `paper` || playerSelection === `scissors`){
-            console.log(`You have selected ${playerSelection}!`);
-            computerSelection = computerSelect();
-        checkHands();
-        } else {
+        if (playerSelection !== null){
+            playerSelection = playerSelection.toLowerCase();
+            console.log(playerSelection);
         
-        console.log(`Please select rock, paper or scissors.`);
-        console.log(``);
-            return;
+            if (playerSelection === `rock` || playerSelection === `paper` || playerSelection === `scissors`){
+                console.log(`You have selected ${playerSelection}!`);
+                computerSelection = computerSelect();
+            checkHands();
+            } else {
+            
+                console.log(`Please select rock, paper or scissors.`);
+                console.log(``);
+                    return;
+            }
+        } else {
+            console.log(`Cancelled.`);
         }
     }
     
