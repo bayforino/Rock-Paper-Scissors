@@ -36,14 +36,12 @@
         a = getRandom(1, 3);
         if (a == 1){
             a = `rock`;
-            console.log(`Computer has selected rock!`);
         } else if (a == 2){
             a = `paper`;
-            console.log(`Computer has selected paper!`);
         } else if (a == 3){
             a = `scissors`;
-            console.log(`Computer has selected scissors!`);
         };
+        console.log(`Computer has selected ${a}!`);
         return a;
     }
 
@@ -118,6 +116,7 @@
             }
         } else {
             console.log(`Cancelled.`);
+            console.log(``);
         }
     }
     
@@ -129,9 +128,13 @@
        computerScore = 0;
         for (i = 0; i < 5; ++i){
             playRound();
+            if (playerSelection == null){
+                break;
+            }
+            else{
             console.log(`${i + 1} rounds of 5 played this game.`)
             console.log(``);
-        }
+        }}
         if (computerScore === playerScore){
             console.log(`The game was a draw!`);
         } 
