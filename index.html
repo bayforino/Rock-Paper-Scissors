@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
-    
-    <h1>Rock Paper Scissors Simulator</h1>
-    <button class='fiverounds'>Play Five Rounds of Rock Paper Scissors</button>
-    <button class='round'>Play One Round of Rock Paper Scissors</button>
-    <h2>Psst! The game's in the console!</h2>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors Simulator®</h1>
+    <h2>A game of skill & wit</h2>
+    <div id="buttonholder">
+      <button id="rock">rock</button>
+      <button id="paper">paper</button>
+      <button id="scissors">scissors</button>
+    </div>
+    <div id="outputHolder">
+      <div id="mainOutput">
+        <p id="output">Select a hand to start playing!</p>
+      </div>
+      <p id="resultOutput">First to five wins!</p>
+      <p class="score" id="computerScore">Computer: 0</p>
+      <p class="score" id="playerScore">Player: 0</p>
+      <p id="counterOutput">No rounds played yet!</p>
+      <p id="copyright">
+        © Will Bayford
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </div>
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
